@@ -15,37 +15,14 @@ namespace You
             Console.WriteLine("Введите Ваше выражение");
             string stroka;
             stroka = Console.ReadLine();
+            stroka = stroka.Replace(" ", "");
             Numbers One = new Numbers(stroka);
-            //bool znak = true;
-            char asd = '0';
+            char sim =' ';                  
+            One.Metoddd(stroka, sim, One);
+
+            //Вера Олеговна вообще беда с двойными знаками формат стринг считаю это не выход из ситуации
             
-
-            char[] sumbol = stroka.ToCharArray();
-            for (int i = 0; i < stroka.Length; i++)
-            {
-                if (sumbol[i] == '>' || sumbol[i] == '<'|| sumbol[i] == '=')
-                {
-                    asd = sumbol[i];
-                }
-            }
-            One.Znak(sumbol, asd);
-            One.Znak_1(sumbol, asd);
-            One.Znak_2(sumbol, asd);
-           // One.Znak_3(sumbol, asd);
-
-            //       znak = (int)sumbol[0] > (int)sumbol[2] ? true : false;
-
-            //    } else if (sumbol[i] == '<')
-            //    {
-            //        Console.WriteLine("prov1");
-            //        znak = (int)sumbol[0] < (int)sumbol[2] ? true : false;
-            //    }
-
-            //}
-
-
-            Console.WriteLine(One.Print());
-          
+            
         }
     }
 }
