@@ -14,15 +14,34 @@ namespace You
         {
             Console.WriteLine("Введите Ваше выражение");
             string stroka;
+            int leng = 7;
             stroka = Console.ReadLine();
             stroka = stroka.Replace(" ", "");
+            
+            try
+            {
+                if (stroka.Length > leng)
+                {
+                    throw new Exception("Выражение слишком длинное возможно некорректное отображение");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Запустите заново и введите выражение повторно");
+            }
+            finally
+            {
+                stroka = Console.ReadLine();
+
+            }
+            stroka = stroka.Replace(" ", "");
             Numbers One = new Numbers(stroka);
-            char sim =' ';                  
+            char sim = ' ';
             One.Metoddd(stroka, sim, One);
 
             //Вера Олеговна вообще беда с двойными знаками формат стринг считаю это не выход из ситуации
-            
-            
+
+
         }
     }
 }
