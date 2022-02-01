@@ -17,7 +17,7 @@ namespace You
             int leng = 7;
             stroka = Console.ReadLine();
             stroka = stroka.Replace(" ", "");
-            
+          
             try
             {
                 if (stroka.Length > leng)
@@ -28,12 +28,9 @@ namespace You
             catch (Exception ex)
             {
                 Console.WriteLine("Запустите заново и введите выражение повторно");
-            }
-            finally
-            {
                 stroka = Console.ReadLine();
-
             }
+           
             stroka = stroka.Replace(" ", "");
             Numbers One = new Numbers(stroka);
             char sim = ' ';
