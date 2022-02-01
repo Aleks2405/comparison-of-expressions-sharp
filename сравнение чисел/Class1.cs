@@ -41,7 +41,7 @@ namespace You
             return znak;
         }
        
-
+        
         public void Metoddd(string stroka, char asd, Numbers One)
         {
             char[] sumbol = stroka.ToCharArray();
